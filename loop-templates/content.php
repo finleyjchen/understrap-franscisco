@@ -18,6 +18,8 @@
 
 			<div class="entry-meta">
 				<?php understrap_posted_on(); ?>
+				<?php understrap_entry_categories(); ?>
+
 			</div><!-- .entry-meta -->
 
 		<?php endif; ?>

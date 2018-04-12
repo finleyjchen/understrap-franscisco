@@ -10559,7 +10559,30 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.6em;
   text-align: center;
   text-transform: uppercase;
-  font-size: 0.8em; }
+  font-size: 0.8em;
+  border-top: 1px solid white; }
+  .entry-meta .cat-links {
+    display: block;
+    text-align: center; }
+    .entry-meta .cat-links a {
+      color: white;
+      -webkit-transition: 0.4s ease-out;
+      transition: 0.4s ease-out;
+      position: relative;
+      display: block;
+      text-decoration: none;
+      width: 200px;
+      margin: 0 auto; }
+      .entry-meta .cat-links a:after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #fff;
+        -webkit-transition: width .3s;
+        transition: width .3s; }
+      .entry-meta .cat-links a:hover:after {
+        width: 100%; }
   .entry-meta a {
     color: white;
     font-style: italic; }

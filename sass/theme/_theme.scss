@@ -141,6 +141,40 @@ h1,h2,h3,h4,h5,h6 {
     text-align: center;
     text-transform: uppercase;
     font-size:0.8em;
+    border-top:1px solid white;
+
+    .posted-on, .byline {
+    }
+
+    .cat-links {
+        display:block;
+        text-align: center;
+        a {
+            color:white;
+            transition:0.4s ease-out;
+            position: relative;
+            display:block;
+            text-decoration: none;
+            width:200px;
+            margin:0 auto;
+            //border-left:1px solid black;
+            &:after {
+                content: '';
+                display: block;
+                width: 0;
+                height: 2px;
+                background: #fff;
+                transition: width .3s;
+            }
+    
+            &:hover:after {
+                width: 100%;
+            }
+        }
+        &:hover {
+
+        }
+    }
     a {
         color:white;
         font-style: italic;
@@ -154,6 +188,8 @@ h1,h2,h3,h4,h5,h6 {
 .entry-footer {
     padding:0.6em;
 }
+
+
 
 .post, .comments-area {
     border:1px solid gray;
