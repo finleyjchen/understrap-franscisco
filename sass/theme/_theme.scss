@@ -1,6 +1,37 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
-img {
+
+@mixin box {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.24);
+    border-radius:3px;
+    border:1px solid gray;
+}
+
+@mixin shadow {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.24);
+}
+
+@mixin button {
+    font-weight:300;
+    text-transform: uppercase;
+    font-size:0.8em;
+    text-decoration: none;
+    border:1px solid $primary;
+    padding:0.3em;
+    border-radius:2px;
+    transition: all 0.4s ease-out;
+    font-family: $font-family-header;
+    margin-right:15px;
+    &:hover {
+        background-color:$primary;
+        a {
+          color:white;
+          text-decoration: none;
+        }
+    }
+}
+
+.entry-content img {
+    @include shadow;
     width:100%;
     height:auto;
 }
@@ -12,10 +43,9 @@ h1,h2,h3,h4,h5,h6 {
     font-family:$font-family-header;
 }
 .widget {
-    border:1px solid gray;
+    @include box;
     margin:1em 0;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.24);
-    border-radius:3px;
+
     ul {
         list-style: none;
         margin:0;
@@ -29,7 +59,7 @@ h1,h2,h3,h4,h5,h6 {
         position: relative;
         text-decoration: none;
         margin:5px 0;
-        border-left:1px solid black;
+        //border-left:1px solid black;
         &:after {
             content: '';
             display: block;
@@ -63,7 +93,7 @@ h1,h2,h3,h4,h5,h6 {
         background-color:$primary;
         color:white;
         padding:0.4em;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.24);
+        @include shadow;
         margin:0;
     }
 
@@ -78,7 +108,7 @@ h1,h2,h3,h4,h5,h6 {
     text-shadow: 1px 1px rgba(0,0,0,0.5);
     margin-bottom:10px;
     border-radius: 1px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.24);
+    @include shadow;
 
 }
 
@@ -125,15 +155,44 @@ h1,h2,h3,h4,h5,h6 {
     padding:0.6em;
 }
 
-.post {
+.post, .comments-area {
     border:1px solid gray;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.24);
+    @include shadow;
     border-radius:3px;
     margin:1em 0;
 }
 
+.comments-area {
+    padding:0.5em;
+}
+
+.comment-list {
+    list-style: none;
+    li {
+        .reply {
+            float:right;
+            @include button;
+        }
+    }
+}
+
 .logged-in-as {
     float:right;
+    @include button;
+}
+
+.form-submit input {
+    background:transparent;
+    color:$primary;
+    @include button;
+}
+
+.form-control {
+    @include box;
+}
+
+.comment-content {
+    margin:0.5em 0;
 }
 
 .social-button {
@@ -258,23 +317,7 @@ h1,h2,h3,h4,h5,h6 {
   
 
   .comments-link, .edit-link {
-      font-weight:300;
-      text-transform: uppercase;
-      font-size:0.8em;
-      text-decoration: none;
-      border:1px solid $primary;
-      padding:0.3em;
-      border-radius:2px;
-      transition: all 0.4s ease-out;
-      font-family: $font-family-header;
-      margin-right:15px;
-      &:hover {
-          background-color:$primary;
-          a {
-            color:white;
-            text-decoration: none;
-          }
-      }
+     @include button;
   }
   
 
@@ -316,3 +359,5 @@ h1,h2,h3,h4,h5,h6 {
     -ms-transform: translate(-50%, -50%);
     text-align: center;
   }
+
+  

@@ -31,7 +31,7 @@ if ( post_password_required() ) {
 				if ( 1 === (int)$comments_number ) {
 					printf(
 						/* translators: %s: post title */
-						esc_html_x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'understrap' ),
+						esc_html_x( 'One comment on &ldquo;%s&rdquo;', 'comments title', 'understrap' ),
 						'<span>' . get_the_title() . '</span>'
 					);
 				} else {
@@ -71,16 +71,16 @@ if ( post_password_required() ) {
 
 		<?php endif; // check for comment navigation. ?>
 
-		<ol class="comment-list">
+		<ul class="comment-list">
 
 			<?php
 			wp_list_comments( array(
-				'style'      => 'ol',
+				'style'      => 'ul',
 				'short_ping' => true,
 			) );
 			?>
 
-		</ol><!-- .comment-list -->
+		</ul><!-- .comment-list -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through. ?>
 			
