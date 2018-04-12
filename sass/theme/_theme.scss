@@ -1,0 +1,318 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+img {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.24);
+    width:100%;
+    height:auto;
+}
+p {
+    font-family:$font-family-sans-serif;
+    letter-spacing:0.2px;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family:$font-family-header;
+}
+.widget {
+    border:1px solid gray;
+    margin:1em 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.24);
+    border-radius:3px;
+    ul {
+        list-style: none;
+        margin:0;
+        padding:0;
+    }
+
+    a {
+        color:black;
+        padding-left:5px;
+        transition:0.4s ease-out;
+        position: relative;
+        text-decoration: none;
+        margin:5px 0;
+        border-left:1px solid black;
+        &:after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #000;
+            transition: width .3s;
+        }
+
+        &:hover:after {
+            width: 100%;
+        }
+    }
+}
+
+.widget-title {
+    background-color:$primary;
+    color:white;
+    padding:0.3em;
+    text-transform: uppercase;
+    letter-spacing: 1px;    
+    font-size:1em;
+}
+
+.home {
+    .entry-title {
+        //text-align:center;
+        a {
+            color:white;
+        }
+        background-color:$primary;
+        color:white;
+        padding:0.4em;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.24);
+        margin:0;
+    }
+
+    .understrap-read-more-link {
+        display:none;
+    }
+}
+
+.jumbotron {
+    background-color:#212529;
+    color:white;
+    text-shadow: 1px 1px rgba(0,0,0,0.5);
+    margin-bottom:10px;
+    border-radius: 1px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.24);
+
+}
+
+
+
+.entry-header {
+    text-align: center;
+    background-color:$primary;
+    margin:0;
+    color:white;
+    text-transform: uppercase;
+    padding:0.4em 0;
+    font-size:18px;
+    letter-spacing:2px;
+    text-align:center;
+    font-weight:bold;
+    border:3px solid #fff;
+    border-radius:2px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.home .entry-title {
+    border:none;
+}
+
+.entry-meta {
+    background-color:$primary;
+    color:white;
+    padding:0.6em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size:0.8em;
+    a {
+        color:white;
+        font-style: italic;
+    }
+}
+
+.entry-content {
+    padding:0.6em;
+}
+
+.entry-footer {
+    padding:0.6em;
+}
+
+.post {
+    border:1px solid gray;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.24);
+    border-radius:3px;
+    margin:1em 0;
+}
+
+.logged-in-as {
+    float:right;
+}
+
+.social-button {
+    color:black;
+    padding:0.5em;
+    transition:0.4s ease-out;
+    border:1px solid rgba(255, 255, 255, 1);
+    background:rgba(255,255,255,1);
+    margin:0;
+    display:block;
+    float:left;
+
+    i {
+        padding-right:5px;
+    }
+    &:hover {
+        text-decoration: none;
+        color:$primary;
+        border-color:$primary;
+    }
+}
+
+.nav-link, .entry-title a {
+    font-size:18px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    display:inline-block;
+    text-align:center;
+    width:150px;
+    font-weight:bold;
+    padding:14px 0px;
+    border:3px solid #fff;
+    border-radius:2px;
+    position:relative;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.1);
+    z-index: 1;
+    margin-right:5px;
+    &:before {
+      -webkit-transition:0.5s all ease;
+      transition:0.5s all ease;
+      position:absolute;
+      top:0;
+      left:50%;
+      right:50%;
+      bottom:0;
+      opacity:0;
+      content:'';
+      background-color:#fff;
+      z-index:-2;
+    }
+    &:hover {
+        color:#000!important;
+
+      &:before {
+        -webkit-transition:0.5s all ease;
+        transition:0.5s all ease;
+        left:0;
+        right:0;
+        opacity:1;
+      }
+    }
+    &:focus {
+      &:before {
+        transition:0.5s all ease;
+        left:0;
+        right:0;
+        opacity:1;
+      }
+    }
+  }
+
+  a.nav-link, .entry-title a {
+    color:#fff;
+    text-decoration:none;
+    -webkit-transition:0.3s all ease;
+    transition:0.3s ease all;
+    &:hover {
+      color:#000;
+    }
+    &:focus {
+      color:#000;
+    }
+  }
+
+  .entry-title a {
+      width:100%;
+  }
+  .navbar-brand-wrap {
+      float:left;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      small {
+          color:white;
+      }
+  }
+  .navbar-brand {
+
+      padding:none;
+      display:block;
+  }
+
+  @media screen and (max-width:480px) {
+      .navbar-brand-wrap {
+        a {
+            font-size:1em;
+            font-weight:bold;
+        }
+        small {
+            font-size:0.7em;
+        }
+      }
+
+      .nav-link {
+          width:100%;
+          margin:10px 0;
+      }
+
+      .custom-html-widget iframe {
+          height:300px!important;
+      }
+  }
+  
+
+  .comments-link, .edit-link {
+      font-weight:300;
+      text-transform: uppercase;
+      font-size:0.8em;
+      text-decoration: none;
+      border:1px solid $primary;
+      padding:0.3em;
+      border-radius:2px;
+      transition: all 0.4s ease-out;
+      font-family: $font-family-header;
+      margin-right:15px;
+      &:hover {
+          background-color:$primary;
+          a {
+            color:white;
+            text-decoration: none;
+          }
+      }
+  }
+  
+
+  .navbar *{
+      font-family:$font-family-header;
+  }
+
+  .twitter-follow-button {
+      float:right;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  }
+  
+  .img-wrap {
+      position: relative;
+  }
+  .img-wrap:hover .overlay {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
