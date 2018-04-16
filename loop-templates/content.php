@@ -18,6 +18,8 @@
 
 			<div class="entry-meta">
 				<?php understrap_posted_on(); ?>
+				<i class="fa fa-tags"></i>
+
 				<?php understrap_entry_categories(); ?>
 
 			</div><!-- .entry-meta -->
